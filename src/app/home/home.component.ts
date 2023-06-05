@@ -6,10 +6,11 @@ import { DrinkService } from '../services/drink/drink.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  foods:string='';
-  constructor(private fs:DrinkService){}
+  drink:string[]=[];
+  constructor(private dr:DrinkService){}
+
   ngOnInit(): void {
-    
+   this.drink = this.dr.getALll();
   }
 
 }
