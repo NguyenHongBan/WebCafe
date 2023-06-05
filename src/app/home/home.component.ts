@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FoodService } from '../services/food/food.service';
+import { DrinkService } from '../services/drink/drink.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +7,7 @@ import { FoodService } from '../services/food/food.service';
 })
 export class HomeComponent implements OnInit{
   foods:string='';
-  constructor(private fs:FoodService){}
+  constructor(private fs:DrinkService){}
   ngOnInit(): void {
     
   }
