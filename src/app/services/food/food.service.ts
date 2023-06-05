@@ -9,7 +9,11 @@ export class FoodService {
 
   getAll():string[]{
     return[
-      
+      '/assets/anh1.jpg',
+      '/assets/anh2.jpg',
+      '/assets/anh3.jpg',
+      '/assets/anh4.jpg',
+      '/assets/anh5.jpg',
     ]
   }
 }
