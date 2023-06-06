@@ -1,1 +1,30 @@
-<p>home works!</p>
+<app-search></app-search>
+<ul>
+    <li *ngFor="let drink of drink">
+        <a> 
+        <img src="{{drink.HinhAnh}}" alt="drink images">
+        <div class="content"> 
+            <div class="ten">
+                {{drink.ten}}
+            </div> 
+            <span class="Favorite {{drink.YeuThich?'':'not'}}">❤️</span>
+           <star-rating> [value]="drink.star" [totalstars]="5" checkedcolor="red" uncheckedcolor = "black" size ="24px" [readonly]="true"</star-rating>
+        <div class="product-item-footer">
+            <div class="origins">
+                <span *ngFor="let NguonGoc of drink.NguonGoc">
+                    {{NguonGoc}}
+                </span>
+            </div>
+           <div class="cook-time">
+             <span>⏱️</span>
+             {{drink.ThoiGian}}
+           </div>
+        </div>
+        <div class="price">
+            <span>🪙</span>
+            {{drink.gia}}
+           </div>
+        </div>
+    </a>
+    </li>
+</ul>
